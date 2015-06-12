@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+
+    $client = new Tumblr\API\Client(
+        env('TUMBLR_KEY_1'),env('TUMBLR_KEY_2'),env('TUMBLR_KEY_3'),env('TUMBLR_KEY_4')
+    );
+
+    return view('welcome')->with('client', $client);
 });

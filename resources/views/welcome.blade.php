@@ -1,48 +1,33 @@
 <html>
-    <head>
-        <title>Laravel</title>
+<head>
+    <title>oAuth testing</title>
+    <link rel="stylesheet" href="/css/app.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            @foreach($client->getBlogPosts('symerizer.tumblr.com')->posts as $post)
+                <div class="col-md-12">
+                    <h1>{{$post->title}}</h1>
+                    <p>{{$post->id}}</p>
+                    <p>{{$post->reblog_key}}</p>
+                    @if(isset($post->body))
+                        {!! $post->body !!}
+                    @endif
+                    <hr/>
+                </div>
+            @endforeach
+            <?php  //$data = array('type'=>'text', 'title'=>'test', 'body' => 'test');
+                   //$client->createPost('symerizer.tumblr.com', $data);
 
-        <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+                ?>
 
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-                margin-bottom: 40px;
-            }
-
-            .quote {
-                font-size: 24px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-                <div class="quote">{{ Inspiring::quote() }}</div>
-            </div>
         </div>
-    </body>
+    </div>
+
+
+
+</div>
+</body>
 </html>

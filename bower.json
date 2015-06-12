@@ -1,0 +1,19 @@
+{
+  "name": "simzink",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Symerizer/simzink",
+  "authors": [
+    "symerizer <jackoftrefle@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-less": "~3.3.4"
+  }
+}
